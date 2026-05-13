@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mon Application AWS</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 48px 56px;
+      text-align: center;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .aws-badge {
+      display: inline-block;
+      background: #FF9900;
+      color: #1a1a2e;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+      background: linear-gradient(90deg, #FF9900, #ffcc70);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .info-item {
+      background: rgba(255,153,0,0.1);
+      border: 1px solid rgba(255,153,0,0.2);
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .info-item .label {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #FF9900;
+      margin-bottom: 4px;
+    }
+    .info-item .value {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #fff;
+      word-break: break-all;
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,200,100,0.15);
+      border: 1px solid rgba(0,200,100,0.3);
+      border-radius: 20px;
+      padding: 8px 20px;
+      font-size: 0.9rem;
+      color: #00c864;
+    }
+    .dot {
+      width: 8px; height: 8px;
+      background: #00c864;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.5; transform: scale(1.3); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="aws-badge">AWS ECS Blue/Green</div>
+    <h1>Déploiement Réussi 🚀</h1>
+    <p class="subtitle">
+      Cette page est servie par un container <strong>nginx</strong> personnalisé,
+      déployé via <strong>AWS CodePipeline</strong> avec une stratégie Blue/Green.
+    </p>
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="label">Image</div>
+        <div class="value">nginx:alpine</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Registry</div>
+        <div class="value">Amazon ECR</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Déployé via</div>
+        <div class="value">CodePipeline + CodeDeploy</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Stratégie</div>
+        <div class="value">Blue/Green ECS</div>
+      </div>
+    </div>
+    <div class="status">
+      <div class="dot"></div>
+      Service opérationnel
+    </div>
+  </div>
+</body>
+</html>
