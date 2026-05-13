@@ -6,19 +6,14 @@ env:
     AWS_ACCOUNT_ID: "727646469531"
     IMAGE_REPO_NAME: "nginx-repo"
     IMAGE_TAG: "latest"
-    CONTAINER_NAME: "nginx-container"   # ← doit correspondre au nom
-                                         #   dans ton taskdef.json
+    CONTAINER_NAME: "sample-website"
 
 phases:
 
   pre_build:
     commands:
       - echo "Connexion à Amazon ECR..."
-      - aws ecr get-login-password --region $AWS_DEFAULT_REGION
-          | docker login
-            --username AWS
-            --password-stdin
-            $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$COMMIT_HASH
 
@@ -27,19 +22,17 @@ phases:
       - echo "Build de l'image Docker..."
       - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $IMAGE_URI
-      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG
-          $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:latest
+      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:latest
 
   post_build:
     commands:
       - echo "Push de l'image vers ECR..."
       - docker push $IMAGE_URI
-      - docker push
-          $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:latest
-      - echo "Génération de imageDetail.json..."
-      - printf '{"ImageURI":"%s"}' $IMAGE_URI > imageDetail.json
-      - cat imageDetail.json
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:latest
+      - echo "Génération de ImageDetail.json..."
+      - printf '{"ImageURI":"%s"}' $IMAGE_URI > ImageDetail.json
+      - cat ImageDetail.json
 
 artifacts:
   files:
-    - imageDetail.json
+    - ImageDetail.json
