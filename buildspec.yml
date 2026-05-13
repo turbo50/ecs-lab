@@ -30,9 +30,10 @@ phases:
       - docker push $IMAGE_URI
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:latest
       - echo "Génération de imageDetail.json..."
-      - printf '{"ImageURI":"%s"}' $IMAGE_URI > imageDetail.json 
+      - printf '{"ImageURI":"%s"}' $IMAGE_URI > imageDetail.json
       - cat imageDetail.json
 
-  artifacts:
-    files:
-      - imageDetail.json   
+# ✅ artifacts au niveau racine — même niveau que "phases"
+artifacts:
+  files:
+    - imageDetail.json
