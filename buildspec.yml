@@ -29,10 +29,10 @@ phases:
       - echo "Push de l'image vers ECR..."
       - docker push $IMAGE_URI
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:latest
-      - echo "Génération de ImageDetail.json..."
-      - printf '{"ImageURI":"%s"}' $IMAGE_URI > ImageDetail.json
-      - cat ImageDetail.json
+      - echo "Génération de imageDetail.json..."
+      - printf '{"ImageURI":"%s"}' $IMAGE_URI > imageDetail.json 
+      - cat imageDetail.json
 
-artifacts:
-  files:
-    - ImageDetail.json
+  artifacts:
+    files:
+      - imageDetail.json   
