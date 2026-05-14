@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thèmes SAP-C02 — AWS Certified Solutions Architect Professional</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thèmes SAP-C02 — AWS Certified Solutions Architect Professional</title>
+<style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -243,534 +244,620 @@
       font-size: 0.8rem;
     }
   </style>
-</head>
+<style>
+.training-note{
+display:none;
+margin-top:12px;
+padding:18px;
+border-radius:14px;
+background:rgba(13,17,23,0.92);
+border:1px solid rgba(255,153,0,0.25);
+box-shadow:0 8px 28px rgba(0,0,0,0.35);
+line-height:1.7;
+}
+.training-note.active{display:block;animation:fade .22s ease;}
+.training-title{
+font-size:1rem;
+font-weight:800;
+color:#FF9900;
+margin-bottom:12px;
+}
+.training-section{
+margin-top:12px;
+}
+.training-section strong{
+color:#ffcc70;
+}
+.training-badge{
+display:inline-block;
+padding:4px 8px;
+margin:2px;
+font-size:0.72rem;
+font-weight:700;
+border-radius:999px;
+background:rgba(255,153,0,0.12);
+border:1px solid rgba(255,153,0,0.25);
+color:#ffcc70;
+}
+.clickable-service{
+cursor:pointer !important;
+transition:all .15s ease;
+}
+.clickable-service:hover{
+transform:translateY(-2px);
+box-shadow:0 0 0 1px rgba(255,153,0,0.25);
+}
+.search-box{
+max-width:1300px;
+margin:0 auto 22px;
+}
+.search-box input{
+width:100%;
+padding:14px 18px;
+border-radius:12px;
+border:1px solid rgba(255,255,255,0.12);
+background:rgba(255,255,255,0.05);
+color:white;
+font-size:0.95rem;
+}
+@keyframes fade{
+from{opacity:0;transform:translateY(-5px);}
+to{opacity:1;transform:translateY(0);}
+}
+</style></head>
 <body>
+<!-- HEADER -->
+<div class="header">
+<div><a class="back-link" href="index.html">← Retour à l'accueil</a></div>
+<div class="cert-badge">AWS Certification</div>
+<h1>Thèmes SAP-C02</h1>
+<p class="header-sub">AWS Certified Solutions Architect — Professional · Score minimum : 750/1000 · 75 questions (65 notées)</p>
+<div class="score-bar">
+<span class="score-pill d1">Domain 1 — 26%</span>
+<span class="score-pill d2">Domain 2 — 29%</span>
+<span class="score-pill d3">Domain 3 — 25%</span>
+<span class="score-pill d4">Domain 4 — 20%</span>
+<span class="score-pill info">2+ ans d'expérience requis</span>
+</div>
+</div>
+<!-- DOMAIN CARDS -->
+<div class="grid">
+<!-- DOMAIN 1 -->
+<div class="domain-card">
+<div class="domain-header d1">
+<div class="domain-icon d1">🏢</div>
+<div class="domain-title">
+<h2>Design Solutions for Organizational Complexity</h2>
+<div class="pct">Domain 1 · Questions les plus nombreuses</div>
+</div>
+<div class="domain-weight d1">26%</div>
+</div>
+<div class="domain-body">
+<div class="task">
+<div class="task-title">Task 1.1 — Network Connectivity Strategies</div>
+<div class="tags">
+<span class="tag d1">AWS Transit Gateway</span>
+<span class="tag d1">VPC Peering</span>
+<span class="tag d1">AWS Direct Connect</span>
+<span class="tag d1">VPN Site-to-Site</span>
+<span class="tag d1">AWS PrivateLink</span>
+<span class="tag d1">VPC Endpoints</span>
+<span class="tag d1">AWS Global Accelerator</span>
+<span class="tag d1">Route 53 Resolver</span>
+<span class="tag d1">Network Firewall</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 1.2 — Security Controls</div>
+<div class="tags">
+<span class="tag d1">AWS Organizations / SCPs</span>
+<span class="tag d1">IAM Identity Center (SSO)</span>
+<span class="tag d1">SAML 2.0 / SCIM</span>
+<span class="tag d1">AWS Control Tower</span>
+<span class="tag d1">AWS RAM</span>
+<span class="tag d1">KMS / CloudHSM</span>
+<span class="tag d1">AWS Macie</span>
+<span class="tag d1">GuardDuty</span>
+<span class="tag d1">Security Hub</span>
+<span class="tag d1">Inspector</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 1.3 — Reliable &amp; Resilient Architectures</div>
+<div class="tags">
+<span class="tag d1">Multi-AZ / Multi-Region</span>
+<span class="tag d1">Disaster Recovery (RTO/RPO)</span>
+<span class="tag d1">Pilot Light</span>
+<span class="tag d1">Warm Standby</span>
+<span class="tag d1">Aurora Global Database</span>
+<span class="tag d1">Route 53 Health Checks</span>
+<span class="tag d1">Elastic Disaster Recovery</span>
+<span class="tag d1">AWS Backup</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 1.4 — Multi-Account AWS Environment</div>
+<div class="tags">
+<span class="tag d1">AWS Organizations</span>
+<span class="tag d1">Control Tower</span>
+<span class="tag d1">Landing Zone</span>
+<span class="tag d1">SCPs</span>
+<span class="tag d1">Delegated Administrator</span>
+<span class="tag d1">AWS Config (multi-account)</span>
+<span class="tag d1">CloudFormation StackSets</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 1.5 — Cost Optimization &amp; Visibility</div>
+<div class="tags">
+<span class="tag d1">AWS Cost Explorer</span>
+<span class="tag d1">AWS Budgets</span>
+<span class="tag d1">Savings Plans</span>
+<span class="tag d1">Reserved Instances</span>
+<span class="tag d1">Spot Instances</span>
+<span class="tag d1">Trusted Advisor</span>
+<span class="tag d1">Cost Allocation Tags</span>
+</div>
+</div>
+</div>
+</div>
+<!-- DOMAIN 2 -->
+<div class="domain-card">
+<div class="domain-header d2">
+<div class="domain-icon d2">🆕</div>
+<div class="domain-title">
+<h2>Design for New Solutions</h2>
+<div class="pct">Domain 2 · Domain le plus pondéré</div>
+</div>
+<div class="domain-weight d2">29%</div>
+</div>
+<div class="domain-body">
+<div class="task">
+<div class="task-title">Task 2.1 — Deployment Strategy</div>
+<div class="tags">
+<span class="tag d2">CloudFormation</span>
+<span class="tag d2">AWS CDK</span>
+<span class="tag d2">Elastic Beanstalk</span>
+<span class="tag d2">CodePipeline</span>
+<span class="tag d2">CodeBuild</span>
+<span class="tag d2">CodeDeploy</span>
+<span class="tag d2">Blue/Green</span>
+<span class="tag d2">Canary / Linear</span>
+<span class="tag d2">AppConfig</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 2.2 — Business Continuity</div>
+<div class="tags">
+<span class="tag d2">RDS Multi-AZ</span>
+<span class="tag d2">Aurora Replicas</span>
+<span class="tag d2">ElastiCache</span>
+<span class="tag d2">S3 Replication</span>
+<span class="tag d2">DynamoDB Global Tables</span>
+<span class="tag d2">Auto Scaling</span>
+<span class="tag d2">ELB Health Checks</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 2.3 — Security Controls</div>
+<div class="tags">
+<span class="tag d2">WAF</span>
+<span class="tag d2">Shield / Shield Advanced</span>
+<span class="tag d2">Cognito</span>
+<span class="tag d2">API Gateway Resource Policy</span>
+<span class="tag d2">VPC Endpoints</span>
+<span class="tag d2">Secrets Manager</span>
+<span class="tag d2">SSM Parameter Store</span>
+<span class="tag d2">ACM</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 2.4 — Reliability</div>
+<div class="tags">
+<span class="tag d2">SQS / SNS / EventBridge</span>
+<span class="tag d2">Step Functions</span>
+<span class="tag d2">Lambda</span>
+<span class="tag d2">ECS / EKS / Fargate</span>
+<span class="tag d2">EC2 Auto Scaling</span>
+<span class="tag d2">EC2 Fleet</span>
+<span class="tag d2">Spot Fleet</span>
+<span class="tag d2">EFA</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 2.5 — Performance</div>
+<div class="tags">
+<span class="tag d2">CloudFront</span>
+<span class="tag d2">ElastiCache Redis/Memcached</span>
+<span class="tag d2">S3 Transfer Acceleration</span>
+<span class="tag d2">Aurora Serverless</span>
+<span class="tag d2">DynamoDB DAX</span>
+<span class="tag d2">Global Accelerator</span>
+<span class="tag d2">EBS gp3 / io2</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 2.6 — Cost Optimization</div>
+<div class="tags">
+<span class="tag d2">Spot Instances</span>
+<span class="tag d2">Savings Plans</span>
+<span class="tag d2">S3 Intelligent-Tiering</span>
+<span class="tag d2">S3 Glacier</span>
+<span class="tag d2">Lambda Power Tuning</span>
+<span class="tag d2">Compute Optimizer</span>
+</div>
+</div>
+</div>
+</div>
+<!-- DOMAIN 3 -->
+<div class="domain-card">
+<div class="domain-header d3">
+<div class="domain-icon d3">📈</div>
+<div class="domain-title">
+<h2>Continuous Improvement for Existing Solutions</h2>
+<div class="pct">Domain 3 · Optimisation et amélioration continue</div>
+</div>
+<div class="domain-weight d3">25%</div>
+</div>
+<div class="domain-body">
+<div class="task">
+<div class="task-title">Task 3.1 — Operational Excellence</div>
+<div class="tags">
+<span class="tag d3">CloudWatch (Metrics / Logs / Alarms)</span>
+<span class="tag d3">CloudWatch Agent</span>
+<span class="tag d3">X-Ray</span>
+<span class="tag d3">CloudTrail</span>
+<span class="tag d3">AWS Config</span>
+<span class="tag d3">Systems Manager</span>
+<span class="tag d3">OpsCenter</span>
+<span class="tag d3">EventBridge</span>
+<span class="tag d3">Trusted Advisor</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 3.2 — Security Improvement</div>
+<div class="tags">
+<span class="tag d3">IAM Access Analyzer</span>
+<span class="tag d3">S3 ACLs / Bucket Policy</span>
+<span class="tag d3">Block Public Access</span>
+<span class="tag d3">AWS Macie</span>
+<span class="tag d3">GuardDuty Findings</span>
+<span class="tag d3">Detective</span>
+<span class="tag d3">Security Hub</span>
+<span class="tag d3">KMS Key Rotation</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 3.3 — Performance Improvement</div>
+<div class="tags">
+<span class="tag d3">Athena + Parquet/ORC</span>
+<span class="tag d3">Hive Partitioning</span>
+<span class="tag d3">Glue</span>
+<span class="tag d3">EMR</span>
+<span class="tag d3">Redshift</span>
+<span class="tag d3">ElastiCache Cluster Mode</span>
+<span class="tag d3">RDS Read Replicas</span>
+<span class="tag d3">DynamoDB Auto Scaling</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 3.4 — Reliability Improvement</div>
+<div class="tags">
+<span class="tag d3">Route 53 Latency Routing</span>
+<span class="tag d3">Route 53 Failover Routing</span>
+<span class="tag d3">Health Checks</span>
+<span class="tag d3">Evaluate Target Health</span>
+<span class="tag d3">DLM (Data Lifecycle Manager)</span>
+<span class="tag d3">EBS Snapshots</span>
+<span class="tag d3">Aurora Backtrack</span>
+<span class="tag d3">RDS Automated Backups</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 3.5 — Cost Optimization</div>
+<div class="tags">
+<span class="tag d3">RDS Storage Auto Scaling</span>
+<span class="tag d3">DynamoDB On-Demand</span>
+<span class="tag d3">S3 Lifecycle Rules</span>
+<span class="tag d3">NAT Gateway Regional</span>
+<span class="tag d3">Data Transfer Costs</span>
+<span class="tag d3">Cost Anomaly Detection</span>
+</div>
+</div>
+</div>
+</div>
+<!-- DOMAIN 4 -->
+<div class="domain-card">
+<div class="domain-header d4">
+<div class="domain-icon d4">🚚</div>
+<div class="domain-title">
+<h2>Accelerate Workload Migration and Modernization</h2>
+<div class="pct">Domain 4 · Migration et modernisation</div>
+</div>
+<div class="domain-weight d4">20%</div>
+</div>
+<div class="domain-body">
+<div class="task">
+<div class="task-title">Task 4.1 — Existing Workloads for Migration</div>
+<div class="tags">
+<span class="tag d4">AWS Application Discovery Service</span>
+<span class="tag d4">Agent-based Discovery</span>
+<span class="tag d4">Agentless Discovery</span>
+<span class="tag d4">AWS Migration Hub</span>
+<span class="tag d4">6 Rs Strategy</span>
+<span class="tag d4">TCO Analysis</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 4.2 — Optimal Migration Approach</div>
+<div class="tags">
+<span class="tag d4">AWS Snowball / Snowmobile</span>
+<span class="tag d4">AWS DataSync</span>
+<span class="tag d4">AWS DMS</span>
+<span class="tag d4">CDC (Change Data Capture)</span>
+<span class="tag d4">AWS MGN (Application Migration Service)</span>
+<span class="tag d4">VMware Cloud on AWS</span>
+<span class="tag d4">Storage Gateway</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 4.3 — New Architecture for Existing Workloads</div>
+<div class="tags">
+<span class="tag d4">Lift &amp; Shift → Re-architect</span>
+<span class="tag d4">Aurora (from RDS MySQL)</span>
+<span class="tag d4">Aurora Clone</span>
+<span class="tag d4">Cross-Region Read Replica</span>
+<span class="tag d4">Containers (ECS / EKS)</span>
+<span class="tag d4">Serverless (Lambda)</span>
+<span class="tag d4">Microservices / API Gateway</span>
+</div>
+</div>
+<div class="task">
+<div class="task-title">Task 4.4 — Modernization Opportunities</div>
+<div class="tags">
+<span class="tag d4">AWS Batch</span>
+<span class="tag d4">AWS ParallelCluster</span>
+<span class="tag d4">HPC / EFA</span>
+<span class="tag d4">EventBridge (Event-Driven)</span>
+<span class="tag d4">SQS / SNS</span>
+<span class="tag d4">Kinesis Data Streams</span>
+<span class="tag d4">MSK (Managed Kafka)</span>
+<span class="tag d4">Athena / Lake Formation</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- KEY SERVICES SECTION -->
+<div class="search-box"><input id="serviceSearch" placeholder="Rechercher un service AWS SAP-C02..."/></div><div class="services-section">
+<h2>⚡ Services AWS clés à maîtriser</h2>
+<div class="services-grid">
+<div class="service-category">
+<div class="service-category-title">Compute</div>
+<span class="service-tag">EC2</span>
+<span class="service-tag">Auto Scaling</span>
+<span class="service-tag">EC2 Fleet</span>
+<span class="service-tag">Spot Fleet</span>
+<span class="service-tag">Lambda</span>
+<span class="service-tag">Fargate</span>
+<span class="service-tag">ECS</span>
+<span class="service-tag">EKS</span>
+<span class="service-tag">Elastic Beanstalk</span>
+<span class="service-tag">Batch</span>
+<span class="service-tag">ParallelCluster</span>
+</div>
+<div class="service-category">
+<div class="service-category-title">Storage</div>
+<span class="service-tag">S3 + ACLs</span>
+<span class="service-tag">S3 Glacier</span>
+<span class="service-tag">EBS</span>
+<span class="service-tag">EFS</span>
+<span class="service-tag">FSx for Lustre</span>
+<span class="service-tag">FSx for Windows</span>
+<span class="service-tag">Storage Gateway</span>
+<span class="service-tag">Snow Family</span>
+</div>
+<div class="service-category">
+<div class="service-category-title">Database</div>
+<span class="service-tag">RDS Multi-AZ</span>
+<span class="service-tag">Aurora</span>
+<span class="service-tag">Aurora Serverless</span>
+<span class="service-tag">Aurora Global DB</span>
+<span class="service-tag">DynamoDB</span>
+<span class="service-tag">DynamoDB DAX</span>
+<span class="service-tag">ElastiCache Redis</span>
+<span class="service-tag">ElastiCache Memcached</span>
+<span class="service-tag">Redshift</span>
+<span class="service-tag">Neptune</span>
+</div>
+<div class="service-category">
+<div class="service-category-title">Networking</div>
+<span class="service-tag">VPC</span>
+<span class="service-tag">Transit Gateway</span>
+<span class="service-tag">Direct Connect</span>
+<span class="service-tag">VPN Site-to-Site</span>
+<span class="service-tag">PrivateLink</span>
+<span class="service-tag">Route 53</span>
+<span class="service-tag">CloudFront</span>
+<span class="service-tag">Global Accelerator</span>
+<span class="service-tag">NAT Gateway</span>
+<span class="service-tag">ELB / ALB / NLB</span>
+<span class="service-tag">Network Firewall</span>
+</div>
+<div class="service-category">
+<div class="service-category-title">Security &amp; IAM</div>
+<span class="service-tag">IAM</span>
+<span class="service-tag">IAM Identity Center</span>
+<span class="service-tag">Organizations / SCPs</span>
+<span class="service-tag">Control Tower</span>
+<span class="service-tag">RAM</span>
+<span class="service-tag">KMS</span>
+<span class="service-tag">CloudHSM</span>
+<span class="service-tag">WAF</span>
+<span class="service-tag">Shield</span>
+<span class="service-tag">Cognito</span>
+<span class="service-tag">Secrets Manager</span>
+<span class="service-tag">ACM</span>
+</div>
+<div class="service-category">
+<div class="service-category-title">Monitoring &amp; Ops</div>
+<span class="service-tag">CloudWatch</span>
+<span class="service-tag">CloudWatch Agent</span>
+<span class="service-tag">CloudTrail</span>
+<span class="service-tag">AWS Config</span>
+<span class="service-tag">X-Ray</span>
+<span class="service-tag">Systems Manager</span>
+<span class="service-tag">Trusted Advisor</span>
+<span class="service-tag">EventBridge</span>
+<span class="service-tag">GuardDuty</span>
+<span class="service-tag">Security Hub</span>
+<span class="service-tag">Macie</span>
+</div>
+<div class="service-category">
+<div class="service-category-title">CI/CD &amp; IaC</div>
+<span class="service-tag">CodePipeline</span>
+<span class="service-tag">CodeBuild</span>
+<span class="service-tag">CodeDeploy</span>
+<span class="service-tag">CloudFormation</span>
+<span class="service-tag">CDK</span>
+<span class="service-tag">Service Catalog</span>
+<span class="service-tag">AppConfig</span>
+</div>
+<div class="service-category">
+<div class="service-category-title">Migration</div>
+<span class="service-tag">Application Discovery</span>
+<span class="service-tag">Migration Hub</span>
+<span class="service-tag">DMS</span>
+<span class="service-tag">DataSync</span>
+<span class="service-tag">Snow Family</span>
+<span class="service-tag">MGN</span>
+<span class="service-tag">Schema Conversion Tool</span>
+</div>
+<div class="service-category">
+<div class="service-category-title">Analytics &amp; Data</div>
+<span class="service-tag">Athena</span>
+<span class="service-tag">Glue</span>
+<span class="service-tag">EMR</span>
+<span class="service-tag">Kinesis</span>
+<span class="service-tag">MSK</span>
+<span class="service-tag">Lake Formation</span>
+<span class="service-tag">QuickSight</span>
+<span class="service-tag">OpenSearch</span>
+</div>
+<div class="service-category">
+<div class="service-category-title">Integration &amp; Messaging</div>
+<span class="service-tag">SQS</span>
+<span class="service-tag">SNS</span>
+<span class="service-tag">EventBridge</span>
+<span class="service-tag">Step Functions</span>
+<span class="service-tag">API Gateway</span>
+<span class="service-tag">AppSync</span>
+<span class="service-tag">MQ</span>
+</div>
+</div>
+</div>
+<!-- EXAM INFO -->
+<div class="exam-info">
+<div class="exam-info-item">
+<div class="ei-value">75</div>
+<div class="ei-label">Questions totales</div>
+</div>
+<div class="exam-info-item">
+<div class="ei-value">65</div>
+<div class="ei-label">Questions notées</div>
+</div>
+<div class="exam-info-item">
+<div class="ei-value">750</div>
+<div class="ei-label">Score minimum /1000</div>
+</div>
+<div class="exam-info-item">
+<div class="ei-value">180</div>
+<div class="ei-label">Minutes (3h)</div>
+</div>
+<div class="exam-info-item">
+<div class="ei-value">2+</div>
+<div class="ei-label">Ans d'expérience AWS</div>
+</div>
+<div class="exam-info-item">
+<div class="ei-value">4</div>
+<div class="ei-label">Domaines</div>
+</div>
+</div>
+<footer>
+<p>AWS Certified Solutions Architect — Professional (SAP-C02) · Source : AWS Official Exam Guide</p>
+</footer>
+<script>
+const notes = {"EventBridge": {"definition": "Amazon EventBridge est un bus d’événements serverless permettant de router des événements AWS, SaaS ou applicatifs vers des cibles.", "keywords": ["event-driven", "decoupling", "routing", "scheduler", "fan-out"], "when": ["Architecture event-driven", "Réagir à des événements AWS", "Orchestration légère sans polling", "Remplacer des cron jobs avec EventBridge Scheduler"], "compare": "SNS = pub/sub simple. SQS = queue durable. EventBridge = routage intelligent par règles.", "sap": ["Très fréquent avec Lambda, Step Functions et ECS.", "Supporte cross-account event bus.", "Très utilisé dans les architectures microservices."], "pitfalls": ["EventBridge ne garantit pas l’ordre global.", "Ne remplace pas SQS pour buffering massif."]}, "Trusted Advisor": {"definition": "AWS Trusted Advisor analyse les ressources AWS et fournit des recommandations sur les coûts, la sécurité, les performances et la résilience.", "keywords": ["cost optimization", "security checks", "fault tolerance"], "when": ["Réduire les coûts", "Identifier ressources inutilisées", "Audit sécurité rapide"], "compare": "Trusted Advisor = recommandations AWS. Compute Optimizer = rightsizing ML.", "sap": ["Très fréquent dans les questions Cost Optimization.", "Business/Enterprise support requis pour checks avancés."], "pitfalls": ["Ce n’est pas un outil temps réel de monitoring."]}, "OpsCenter": {"definition": "AWS Systems Manager OpsCenter centralise les incidents opérationnels sous forme d’OpsItems.", "keywords": ["operations", "incident", "automation", "centralization"], "when": ["Centraliser incidents CloudWatch/Config/Security Hub", "Déclencher des runbooks Automation"], "compare": "OpsCenter centralise les incidents. Incident Manager gère les crises majeures.", "sap": ["Très utilisé avec Systems Manager Automation.", "Bon choix pour opérations multi-comptes."], "pitfalls": ["Pas conçu pour remplacer un SIEM complet."]}, "Transit Gateway": {"definition": "AWS Transit Gateway fournit un hub réseau central pour connecter VPCs, VPN et Direct Connect.", "keywords": ["hub-and-spoke", "network centralization", "hybrid"], "when": ["Des dizaines de VPCs", "Éviter le full mesh VPC Peering", "Hybrid cloud complexe"], "compare": "VPC Peering = simple et point-à-point. TGW = scalable et centralisé.", "sap": ["Architecture hub-and-spoke.", "Supporte AWS RAM et multi-comptes.", "Très fréquent dans SAP-C02."], "pitfalls": ["Attention aux coûts data transfer.", "Pas de transitive routing avec VPC Peering."]}, "CodePipeline": {"definition": "AWS CodePipeline orchestre les pipelines CI/CD AWS.", "keywords": ["CI/CD", "pipeline", "deployment"], "when": ["Automatiser build/test/deploy", "Déploiements multi-comptes", "Approval avant production"], "compare": "CodePipeline orchestre. CodeBuild build/test. CodeDeploy déploie.", "sap": ["Supporte cross-account et cross-region.", "Très fréquent avec ECS Blue/Green."], "pitfalls": ["Artifacts cross-region nécessitent artifactStores."]}};
 
-  <!-- HEADER -->
-  <div class="header">
-    <div><a href="index.html" class="back-link">← Retour à l'accueil</a></div>
-    <div class="cert-badge">AWS Certification</div>
-    <h1>Thèmes SAP-C02</h1>
-    <p class="header-sub">AWS Certified Solutions Architect — Professional · Score minimum : 750/1000 · 75 questions (65 notées)</p>
+function closeAll(){
+ document.querySelectorAll('.training-note').forEach(x=>x.classList.remove('active'));
+}
 
-    <div class="score-bar">
-      <span class="score-pill d1">Domain 1 — 26%</span>
-      <span class="score-pill d2">Domain 2 — 29%</span>
-      <span class="score-pill d3">Domain 3 — 25%</span>
-      <span class="score-pill d4">Domain 4 — 20%</span>
-      <span class="score-pill info">2+ ans d'expérience requis</span>
-    </div>
-  </div>
+document.querySelectorAll('.tag, .service-tag').forEach(el=>{
+ const name = el.textContent.trim();
 
-  <!-- DOMAIN CARDS -->
-  <div class="grid">
+ if(notes[name]){
+   el.classList.add('clickable-service');
 
-    <!-- DOMAIN 1 -->
-    <div class="domain-card">
-      <div class="domain-header d1">
-        <div class="domain-icon d1">🏢</div>
-        <div class="domain-title">
-          <h2>Design Solutions for Organizational Complexity</h2>
-          <div class="pct">Domain 1 · Questions les plus nombreuses</div>
-        </div>
-        <div class="domain-weight d1">26%</div>
-      </div>
-      <div class="domain-body">
+   const note = document.createElement('div');
+   note.className = 'training-note';
 
-        <div class="task">
-          <div class="task-title">Task 1.1 — Network Connectivity Strategies</div>
-          <div class="tags">
-            <span class="tag d1">AWS Transit Gateway</span>
-            <span class="tag d1">VPC Peering</span>
-            <span class="tag d1">AWS Direct Connect</span>
-            <span class="tag d1">VPN Site-to-Site</span>
-            <span class="tag d1">AWS PrivateLink</span>
-            <span class="tag d1">VPC Endpoints</span>
-            <span class="tag d1">AWS Global Accelerator</span>
-            <span class="tag d1">Route 53 Resolver</span>
-            <span class="tag d1">Network Firewall</span>
-          </div>
-        </div>
+   const data = notes[name];
 
-        <div class="task">
-          <div class="task-title">Task 1.2 — Security Controls</div>
-          <div class="tags">
-            <span class="tag d1">AWS Organizations / SCPs</span>
-            <span class="tag d1">IAM Identity Center (SSO)</span>
-            <span class="tag d1">SAML 2.0 / SCIM</span>
-            <span class="tag d1">AWS Control Tower</span>
-            <span class="tag d1">AWS RAM</span>
-            <span class="tag d1">KMS / CloudHSM</span>
-            <span class="tag d1">AWS Macie</span>
-            <span class="tag d1">GuardDuty</span>
-            <span class="tag d1">Security Hub</span>
-            <span class="tag d1">Inspector</span>
-          </div>
-        </div>
+   note.innerHTML = `
+     <div class="training-title">${name}</div>
 
-        <div class="task">
-          <div class="task-title">Task 1.3 — Reliable & Resilient Architectures</div>
-          <div class="tags">
-            <span class="tag d1">Multi-AZ / Multi-Region</span>
-            <span class="tag d1">Disaster Recovery (RTO/RPO)</span>
-            <span class="tag d1">Pilot Light</span>
-            <span class="tag d1">Warm Standby</span>
-            <span class="tag d1">Aurora Global Database</span>
-            <span class="tag d1">Route 53 Health Checks</span>
-            <span class="tag d1">Elastic Disaster Recovery</span>
-            <span class="tag d1">AWS Backup</span>
-          </div>
-        </div>
+     <div class="training-section">
+       <strong>Définition AWS :</strong><br/>
+       ${data.definition}
+     </div>
 
-        <div class="task">
-          <div class="task-title">Task 1.4 — Multi-Account AWS Environment</div>
-          <div class="tags">
-            <span class="tag d1">AWS Organizations</span>
-            <span class="tag d1">Control Tower</span>
-            <span class="tag d1">Landing Zone</span>
-            <span class="tag d1">SCPs</span>
-            <span class="tag d1">Delegated Administrator</span>
-            <span class="tag d1">AWS Config (multi-account)</span>
-            <span class="tag d1">CloudFormation StackSets</span>
-          </div>
-        </div>
+     <div class="training-section">
+       <strong>Mots-clés SAP-C02 :</strong><br/>
+       ${data.keywords.map(k=>`<span class="training-badge">${k}</span>`).join('')}
+     </div>
 
-        <div class="task">
-          <div class="task-title">Task 1.5 — Cost Optimization & Visibility</div>
-          <div class="tags">
-            <span class="tag d1">AWS Cost Explorer</span>
-            <span class="tag d1">AWS Budgets</span>
-            <span class="tag d1">Savings Plans</span>
-            <span class="tag d1">Reserved Instances</span>
-            <span class="tag d1">Spot Instances</span>
-            <span class="tag d1">Trusted Advisor</span>
-            <span class="tag d1">Cost Allocation Tags</span>
-          </div>
-        </div>
+     <div class="training-section">
+       <strong>Quand AWS attend ce service ?</strong>
+       <ul>${data.when.map(i=>`<li>${i}</li>`).join('')}</ul>
+     </div>
 
-      </div>
-    </div>
+     <div class="training-section">
+       <strong>Comparaison importante :</strong><br/>
+       ${data.compare}
+     </div>
 
-    <!-- DOMAIN 2 -->
-    <div class="domain-card">
-      <div class="domain-header d2">
-        <div class="domain-icon d2">🆕</div>
-        <div class="domain-title">
-          <h2>Design for New Solutions</h2>
-          <div class="pct">Domain 2 · Domain le plus pondéré</div>
-        </div>
-        <div class="domain-weight d2">29%</div>
-      </div>
-      <div class="domain-body">
+     <div class="training-section">
+       <strong>À connaître pour SAP-C02 :</strong>
+       <ul>${data.sap.map(i=>`<li>${i}</li>`).join('')}</ul>
+     </div>
 
-        <div class="task">
-          <div class="task-title">Task 2.1 — Deployment Strategy</div>
-          <div class="tags">
-            <span class="tag d2">CloudFormation</span>
-            <span class="tag d2">AWS CDK</span>
-            <span class="tag d2">Elastic Beanstalk</span>
-            <span class="tag d2">CodePipeline</span>
-            <span class="tag d2">CodeBuild</span>
-            <span class="tag d2">CodeDeploy</span>
-            <span class="tag d2">Blue/Green</span>
-            <span class="tag d2">Canary / Linear</span>
-            <span class="tag d2">AppConfig</span>
-          </div>
-        </div>
+     <div class="training-section">
+       <strong>Pièges fréquents :</strong>
+       <ul>${data.pitfalls.map(i=>`<li>${i}</li>`).join('')}</ul>
+     </div>
+   `;
 
-        <div class="task">
-          <div class="task-title">Task 2.2 — Business Continuity</div>
-          <div class="tags">
-            <span class="tag d2">RDS Multi-AZ</span>
-            <span class="tag d2">Aurora Replicas</span>
-            <span class="tag d2">ElastiCache</span>
-            <span class="tag d2">S3 Replication</span>
-            <span class="tag d2">DynamoDB Global Tables</span>
-            <span class="tag d2">Auto Scaling</span>
-            <span class="tag d2">ELB Health Checks</span>
-          </div>
-        </div>
+   el.parentNode.appendChild(note);
 
-        <div class="task">
-          <div class="task-title">Task 2.3 — Security Controls</div>
-          <div class="tags">
-            <span class="tag d2">WAF</span>
-            <span class="tag d2">Shield / Shield Advanced</span>
-            <span class="tag d2">Cognito</span>
-            <span class="tag d2">API Gateway Resource Policy</span>
-            <span class="tag d2">VPC Endpoints</span>
-            <span class="tag d2">Secrets Manager</span>
-            <span class="tag d2">SSM Parameter Store</span>
-            <span class="tag d2">ACM</span>
-          </div>
-        </div>
+   el.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      const already = note.classList.contains('active');
+      closeAll();
+      if(!already) note.classList.add('active');
+   });
+ }
+});
 
-        <div class="task">
-          <div class="task-title">Task 2.4 — Reliability</div>
-          <div class="tags">
-            <span class="tag d2">SQS / SNS / EventBridge</span>
-            <span class="tag d2">Step Functions</span>
-            <span class="tag d2">Lambda</span>
-            <span class="tag d2">ECS / EKS / Fargate</span>
-            <span class="tag d2">EC2 Auto Scaling</span>
-            <span class="tag d2">EC2 Fleet</span>
-            <span class="tag d2">Spot Fleet</span>
-            <span class="tag d2">EFA</span>
-          </div>
-        </div>
+document.addEventListener('click', ()=>closeAll());
 
-        <div class="task">
-          <div class="task-title">Task 2.5 — Performance</div>
-          <div class="tags">
-            <span class="tag d2">CloudFront</span>
-            <span class="tag d2">ElastiCache Redis/Memcached</span>
-            <span class="tag d2">S3 Transfer Acceleration</span>
-            <span class="tag d2">Aurora Serverless</span>
-            <span class="tag d2">DynamoDB DAX</span>
-            <span class="tag d2">Global Accelerator</span>
-            <span class="tag d2">EBS gp3 / io2</span>
-          </div>
-        </div>
+document.getElementById('serviceSearch').addEventListener('input', function(){
+  const q = this.value.toLowerCase();
 
-        <div class="task">
-          <div class="task-title">Task 2.6 — Cost Optimization</div>
-          <div class="tags">
-            <span class="tag d2">Spot Instances</span>
-            <span class="tag d2">Savings Plans</span>
-            <span class="tag d2">S3 Intelligent-Tiering</span>
-            <span class="tag d2">S3 Glacier</span>
-            <span class="tag d2">Lambda Power Tuning</span>
-            <span class="tag d2">Compute Optimizer</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- DOMAIN 3 -->
-    <div class="domain-card">
-      <div class="domain-header d3">
-        <div class="domain-icon d3">📈</div>
-        <div class="domain-title">
-          <h2>Continuous Improvement for Existing Solutions</h2>
-          <div class="pct">Domain 3 · Optimisation et amélioration continue</div>
-        </div>
-        <div class="domain-weight d3">25%</div>
-      </div>
-      <div class="domain-body">
-
-        <div class="task">
-          <div class="task-title">Task 3.1 — Operational Excellence</div>
-          <div class="tags">
-            <span class="tag d3">CloudWatch (Metrics / Logs / Alarms)</span>
-            <span class="tag d3">CloudWatch Agent</span>
-            <span class="tag d3">X-Ray</span>
-            <span class="tag d3">CloudTrail</span>
-            <span class="tag d3">AWS Config</span>
-            <span class="tag d3">Systems Manager</span>
-            <span class="tag d3">OpsCenter</span>
-            <span class="tag d3">EventBridge</span>
-            <span class="tag d3">Trusted Advisor</span>
-          </div>
-        </div>
-
-        <div class="task">
-          <div class="task-title">Task 3.2 — Security Improvement</div>
-          <div class="tags">
-            <span class="tag d3">IAM Access Analyzer</span>
-            <span class="tag d3">S3 ACLs / Bucket Policy</span>
-            <span class="tag d3">Block Public Access</span>
-            <span class="tag d3">AWS Macie</span>
-            <span class="tag d3">GuardDuty Findings</span>
-            <span class="tag d3">Detective</span>
-            <span class="tag d3">Security Hub</span>
-            <span class="tag d3">KMS Key Rotation</span>
-          </div>
-        </div>
-
-        <div class="task">
-          <div class="task-title">Task 3.3 — Performance Improvement</div>
-          <div class="tags">
-            <span class="tag d3">Athena + Parquet/ORC</span>
-            <span class="tag d3">Hive Partitioning</span>
-            <span class="tag d3">Glue</span>
-            <span class="tag d3">EMR</span>
-            <span class="tag d3">Redshift</span>
-            <span class="tag d3">ElastiCache Cluster Mode</span>
-            <span class="tag d3">RDS Read Replicas</span>
-            <span class="tag d3">DynamoDB Auto Scaling</span>
-          </div>
-        </div>
-
-        <div class="task">
-          <div class="task-title">Task 3.4 — Reliability Improvement</div>
-          <div class="tags">
-            <span class="tag d3">Route 53 Latency Routing</span>
-            <span class="tag d3">Route 53 Failover Routing</span>
-            <span class="tag d3">Health Checks</span>
-            <span class="tag d3">Evaluate Target Health</span>
-            <span class="tag d3">DLM (Data Lifecycle Manager)</span>
-            <span class="tag d3">EBS Snapshots</span>
-            <span class="tag d3">Aurora Backtrack</span>
-            <span class="tag d3">RDS Automated Backups</span>
-          </div>
-        </div>
-
-        <div class="task">
-          <div class="task-title">Task 3.5 — Cost Optimization</div>
-          <div class="tags">
-            <span class="tag d3">RDS Storage Auto Scaling</span>
-            <span class="tag d3">DynamoDB On-Demand</span>
-            <span class="tag d3">S3 Lifecycle Rules</span>
-            <span class="tag d3">NAT Gateway Regional</span>
-            <span class="tag d3">Data Transfer Costs</span>
-            <span class="tag d3">Cost Anomaly Detection</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- DOMAIN 4 -->
-    <div class="domain-card">
-      <div class="domain-header d4">
-        <div class="domain-icon d4">🚚</div>
-        <div class="domain-title">
-          <h2>Accelerate Workload Migration and Modernization</h2>
-          <div class="pct">Domain 4 · Migration et modernisation</div>
-        </div>
-        <div class="domain-weight d4">20%</div>
-      </div>
-      <div class="domain-body">
-
-        <div class="task">
-          <div class="task-title">Task 4.1 — Existing Workloads for Migration</div>
-          <div class="tags">
-            <span class="tag d4">AWS Application Discovery Service</span>
-            <span class="tag d4">Agent-based Discovery</span>
-            <span class="tag d4">Agentless Discovery</span>
-            <span class="tag d4">AWS Migration Hub</span>
-            <span class="tag d4">6 Rs Strategy</span>
-            <span class="tag d4">TCO Analysis</span>
-          </div>
-        </div>
-
-        <div class="task">
-          <div class="task-title">Task 4.2 — Optimal Migration Approach</div>
-          <div class="tags">
-            <span class="tag d4">AWS Snowball / Snowmobile</span>
-            <span class="tag d4">AWS DataSync</span>
-            <span class="tag d4">AWS DMS</span>
-            <span class="tag d4">CDC (Change Data Capture)</span>
-            <span class="tag d4">AWS MGN (Application Migration Service)</span>
-            <span class="tag d4">VMware Cloud on AWS</span>
-            <span class="tag d4">Storage Gateway</span>
-          </div>
-        </div>
-
-        <div class="task">
-          <div class="task-title">Task 4.3 — New Architecture for Existing Workloads</div>
-          <div class="tags">
-            <span class="tag d4">Lift &amp; Shift → Re-architect</span>
-            <span class="tag d4">Aurora (from RDS MySQL)</span>
-            <span class="tag d4">Aurora Clone</span>
-            <span class="tag d4">Cross-Region Read Replica</span>
-            <span class="tag d4">Containers (ECS / EKS)</span>
-            <span class="tag d4">Serverless (Lambda)</span>
-            <span class="tag d4">Microservices / API Gateway</span>
-          </div>
-        </div>
-
-        <div class="task">
-          <div class="task-title">Task 4.4 — Modernization Opportunities</div>
-          <div class="tags">
-            <span class="tag d4">AWS Batch</span>
-            <span class="tag d4">AWS ParallelCluster</span>
-            <span class="tag d4">HPC / EFA</span>
-            <span class="tag d4">EventBridge (Event-Driven)</span>
-            <span class="tag d4">SQS / SNS</span>
-            <span class="tag d4">Kinesis Data Streams</span>
-            <span class="tag d4">MSK (Managed Kafka)</span>
-            <span class="tag d4">Athena / Lake Formation</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
-  <!-- KEY SERVICES SECTION -->
-  <div class="services-section">
-    <h2>⚡ Services AWS clés à maîtriser</h2>
-    <div class="services-grid">
-
-      <div class="service-category">
-        <div class="service-category-title">Compute</div>
-        <span class="service-tag">EC2</span>
-        <span class="service-tag">Auto Scaling</span>
-        <span class="service-tag">EC2 Fleet</span>
-        <span class="service-tag">Spot Fleet</span>
-        <span class="service-tag">Lambda</span>
-        <span class="service-tag">Fargate</span>
-        <span class="service-tag">ECS</span>
-        <span class="service-tag">EKS</span>
-        <span class="service-tag">Elastic Beanstalk</span>
-        <span class="service-tag">Batch</span>
-        <span class="service-tag">ParallelCluster</span>
-      </div>
-
-      <div class="service-category">
-        <div class="service-category-title">Storage</div>
-        <span class="service-tag">S3 + ACLs</span>
-        <span class="service-tag">S3 Glacier</span>
-        <span class="service-tag">EBS</span>
-        <span class="service-tag">EFS</span>
-        <span class="service-tag">FSx for Lustre</span>
-        <span class="service-tag">FSx for Windows</span>
-        <span class="service-tag">Storage Gateway</span>
-        <span class="service-tag">Snow Family</span>
-      </div>
-
-      <div class="service-category">
-        <div class="service-category-title">Database</div>
-        <span class="service-tag">RDS Multi-AZ</span>
-        <span class="service-tag">Aurora</span>
-        <span class="service-tag">Aurora Serverless</span>
-        <span class="service-tag">Aurora Global DB</span>
-        <span class="service-tag">DynamoDB</span>
-        <span class="service-tag">DynamoDB DAX</span>
-        <span class="service-tag">ElastiCache Redis</span>
-        <span class="service-tag">ElastiCache Memcached</span>
-        <span class="service-tag">Redshift</span>
-        <span class="service-tag">Neptune</span>
-      </div>
-
-      <div class="service-category">
-        <div class="service-category-title">Networking</div>
-        <span class="service-tag">VPC</span>
-        <span class="service-tag">Transit Gateway</span>
-        <span class="service-tag">Direct Connect</span>
-        <span class="service-tag">VPN Site-to-Site</span>
-        <span class="service-tag">PrivateLink</span>
-        <span class="service-tag">Route 53</span>
-        <span class="service-tag">CloudFront</span>
-        <span class="service-tag">Global Accelerator</span>
-        <span class="service-tag">NAT Gateway</span>
-        <span class="service-tag">ELB / ALB / NLB</span>
-        <span class="service-tag">Network Firewall</span>
-      </div>
-
-      <div class="service-category">
-        <div class="service-category-title">Security & IAM</div>
-        <span class="service-tag">IAM</span>
-        <span class="service-tag">IAM Identity Center</span>
-        <span class="service-tag">Organizations / SCPs</span>
-        <span class="service-tag">Control Tower</span>
-        <span class="service-tag">RAM</span>
-        <span class="service-tag">KMS</span>
-        <span class="service-tag">CloudHSM</span>
-        <span class="service-tag">WAF</span>
-        <span class="service-tag">Shield</span>
-        <span class="service-tag">Cognito</span>
-        <span class="service-tag">Secrets Manager</span>
-        <span class="service-tag">ACM</span>
-      </div>
-
-      <div class="service-category">
-        <div class="service-category-title">Monitoring & Ops</div>
-        <span class="service-tag">CloudWatch</span>
-        <span class="service-tag">CloudWatch Agent</span>
-        <span class="service-tag">CloudTrail</span>
-        <span class="service-tag">AWS Config</span>
-        <span class="service-tag">X-Ray</span>
-        <span class="service-tag">Systems Manager</span>
-        <span class="service-tag">Trusted Advisor</span>
-        <span class="service-tag">EventBridge</span>
-        <span class="service-tag">GuardDuty</span>
-        <span class="service-tag">Security Hub</span>
-        <span class="service-tag">Macie</span>
-      </div>
-
-      <div class="service-category">
-        <div class="service-category-title">CI/CD & IaC</div>
-        <span class="service-tag">CodePipeline</span>
-        <span class="service-tag">CodeBuild</span>
-        <span class="service-tag">CodeDeploy</span>
-        <span class="service-tag">CloudFormation</span>
-        <span class="service-tag">CDK</span>
-        <span class="service-tag">Service Catalog</span>
-        <span class="service-tag">AppConfig</span>
-      </div>
-
-      <div class="service-category">
-        <div class="service-category-title">Migration</div>
-        <span class="service-tag">Application Discovery</span>
-        <span class="service-tag">Migration Hub</span>
-        <span class="service-tag">DMS</span>
-        <span class="service-tag">DataSync</span>
-        <span class="service-tag">Snow Family</span>
-        <span class="service-tag">MGN</span>
-        <span class="service-tag">Schema Conversion Tool</span>
-      </div>
-
-      <div class="service-category">
-        <div class="service-category-title">Analytics & Data</div>
-        <span class="service-tag">Athena</span>
-        <span class="service-tag">Glue</span>
-        <span class="service-tag">EMR</span>
-        <span class="service-tag">Kinesis</span>
-        <span class="service-tag">MSK</span>
-        <span class="service-tag">Lake Formation</span>
-        <span class="service-tag">QuickSight</span>
-        <span class="service-tag">OpenSearch</span>
-      </div>
-
-      <div class="service-category">
-        <div class="service-category-title">Integration & Messaging</div>
-        <span class="service-tag">SQS</span>
-        <span class="service-tag">SNS</span>
-        <span class="service-tag">EventBridge</span>
-        <span class="service-tag">Step Functions</span>
-        <span class="service-tag">API Gateway</span>
-        <span class="service-tag">AppSync</span>
-        <span class="service-tag">MQ</span>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- EXAM INFO -->
-  <div class="exam-info">
-    <div class="exam-info-item">
-      <div class="ei-value">75</div>
-      <div class="ei-label">Questions totales</div>
-    </div>
-    <div class="exam-info-item">
-      <div class="ei-value">65</div>
-      <div class="ei-label">Questions notées</div>
-    </div>
-    <div class="exam-info-item">
-      <div class="ei-value">750</div>
-      <div class="ei-label">Score minimum /1000</div>
-    </div>
-    <div class="exam-info-item">
-      <div class="ei-value">180</div>
-      <div class="ei-label">Minutes (3h)</div>
-    </div>
-    <div class="exam-info-item">
-      <div class="ei-value">2+</div>
-      <div class="ei-label">Ans d'expérience AWS</div>
-    </div>
-    <div class="exam-info-item">
-      <div class="ei-value">4</div>
-      <div class="ei-label">Domaines</div>
-    </div>
-  </div>
-
-  <footer>
-    <p>AWS Certified Solutions Architect — Professional (SAP-C02) · Source : AWS Official Exam Guide</p>
-  </footer>
-
-</body>
+  document.querySelectorAll('.tag, .service-tag').forEach(el=>{
+    const txt = el.textContent.toLowerCase();
+    el.style.display = txt.includes(q) ? '' : 'none';
+  });
+});
+</script></body>
 </html>
